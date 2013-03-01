@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ProjectNAOEAR">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="ProjectNAO.jar" deploy-path="/" handle="module:/resource/ProjectNAO/ProjectNAO">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ProjectNAOClient.jar" deploy-path="/" handle="module:/resource/ProjectNAOClient/ProjectNAOClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ProjectNAO-UI-WEB.war" deploy-path="/" handle="module:/resource/ProjectNAO-UI-WEB/ProjectNAO-UI-WEB">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ProjectNAO-Helper.jar" deploy-path="/lib" handle="module:/resource/ProjectNAO-Helper/ProjectNAO-Helper">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
