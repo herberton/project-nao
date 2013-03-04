@@ -8,9 +8,9 @@
 		<session-timeout>10</session-timeout>
 	</session-config>
 	<servlet>
-    	<servlet-name>Faces Servlet</servlet-name>
+    	<servlet-name>FacesServlet</servlet-name>
     	<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
-    	<load-on-startup>2</load-on-startup>
+    	<load-on-startup>1</load-on-startup>
   	</servlet>
 	<servlet-mapping>
 		<servlet-name>FacesServlet</servlet-name>

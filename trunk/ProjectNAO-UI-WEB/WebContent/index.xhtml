@@ -7,81 +7,14 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:pe="http://primefaces.org/ui/extensions">
-	
 	<h:head>
-	<title>#{i18n.systemName}</title>
-	<h:outputStylesheet library="css" name="basic.css" />
-	<link rel="shortcut icon" href="resources/images/favicon.ico" />
-	<link rel="icon" type="image/gif" href="resources/images/animated_favicon1.gif" />
-</h:head>
-<h:body styleClass="bodyLogin">
-	<div style="width: 600px; height: 400px; border: 0; position: absolute; top: 25%; left: 25%;">
-		<p:fieldset legend="#{i18n.doTheAuthentication}" style="height:250px;background-color: #EBEBEB;position: absolute;top: 10%;">
-			<div style="background-color: #EBEBEB; margin-top: 8%;">
-				<div style="height: 100px; border: 0; width: 280px; float: left;">
-					<h:form>
-						<p:focus for="userName" />
-						<p:growl />
-						<h:panelGrid columns="2">
-							<p:outputLabel for="language" value="#{i18n.language}" />
-							<p:autoComplete 
-								id="language" 
-								dropdown="true" 
-								size="29"
-								value="#{loginMB.selectedSupportedLocale}"
-								completeMethod="#{loginMB.getValidSupportedLocaleCollection}"
-								var="supLocale" 
-								converter="supportedLocaleFC"
-								itemLabel="#{supLocale.textlanguage}"
-								itemValue="#{supLocale}">
-								<p:column>
-									#{supLocale.textlanguage}
-								</p:column>
-								<p:column>
-									<h:graphicImage
-										library="images"
-										name="#{supLocale.iconName}"
-										styleClass="noImgBorder" />
-								</p:column>
-							</p:autoComplete>
-
-							<p:outputLabel 
-								for="userName" 
-								value="#{i18n.user}" />
-							
-							<p:inputText
-								value="#{loginMB.systemUser.login}"
-								size="35" 
-								id="userName" 
-								required="true"
-								requiredMessage="#{i18n.typeTheUserName}" />
-								
-							<p:outputLabel for="password" value="#{i18n.password}" />
-							
-							<p:password
-								value="#{loginMB.systemUser.password}"
-								size="35"
-								id="password"
-								required="true"
-								requiredMessage="#{i18n.typeThePassword}" />
-						</h:panelGrid>
-						
-						<p:commandButton value="#{i18n.authenticate}" action="#{loginMB.authenticate}" update="@form" />
-						<p:spacer width="5" />
-						<p:commandButton value="#{i18n.forgotMyPassword}" action="#{loginMB.forgotMyPassword}" update="@form" />
-
-					</h:form>
-				</div>
-				
-				<div style="height: 100px; width: 285px; float: left; border: 0;">
-					<div style="width: 180px; height: 100px; float: right; border: 0;">
-						<p:graphicImage url="#{resource['images:logo_b4l.png']}" height="100" />
-					</div>
-				</div>
-			</div>
+		<title>#{i18n.systemName}</title>
+	</h:head>
+	<h:body>
+		<p:fieldset>
+			<h:form>
+				<p:commandButton value="teste" action="#{indexMB.teste}" update="@form" />
+			</h:form>
 		</p:fieldset>
-	</div>
-</h:body>
-	
-	
+	</h:body>
 </html>
