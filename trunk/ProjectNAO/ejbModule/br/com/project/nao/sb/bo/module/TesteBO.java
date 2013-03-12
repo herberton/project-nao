@@ -11,7 +11,7 @@ public class TesteBO implements TesteBORemote {
 
 	@Override
 	public String metodoTeste() {
-		return "teste";
+		return "teste1";
 	}
 
 }
