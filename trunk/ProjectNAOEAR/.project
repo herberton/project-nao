@@ -4,9 +4,10 @@
 	<comment></comment>
 	<projects>
 		<project>ProjectNAO</project>
-		<project>ProjectNAOClient</project>
-		<project>ProjectNAO-UI-WEB</project>
 		<project>ProjectNAO-Helper</project>
+		<project>ProjectNAO-JPA</project>
+		<project>ProjectNAO-UI-WEB</project>
+		<project>ProjectNAOClient</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
