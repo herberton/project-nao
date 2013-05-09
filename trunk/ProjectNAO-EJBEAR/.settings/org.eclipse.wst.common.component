@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ProjectNAO-EJBEAR">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="ProjectNAO-EJB.jar" deploy-path="/" handle="module:/resource/ProjectNAO-EJB/ProjectNAO-EJB">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ProjectNAO-EJBClient.jar" deploy-path="/" handle="module:/resource/ProjectNAO-EJBClient/ProjectNAO-EJBClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ProjectNAO-JPA.jar" deploy-path="/lib" handle="module:/resource/ProjectNAO-JPA/ProjectNAO-JPA">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ProjectNAO-UI-WEB.war" deploy-path="/" handle="module:/resource/ProjectNAO-UI-WEB/ProjectNAO-UI-WEB">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
