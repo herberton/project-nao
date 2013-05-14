@@ -1,9 +1,11 @@
-package br.com.project_nao.jpa.entity.common;
+package br.com.project_nao.jpa.entity.audit;
 
 import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+
+import br.com.project_nao.jpa.entity.common.AEntity;
 
 @Entity
 public class AuditEntity<T extends AEntity<T>> extends AEntity<AuditEntity<T>> implements Serializable {

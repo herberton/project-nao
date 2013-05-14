@@ -1,4 +1,4 @@
-package br.com.project_nao.jpa.entity.common.pk;
+package br.com.project_nao.jpa.pk.common;
 
 import java.io.Serializable;
 

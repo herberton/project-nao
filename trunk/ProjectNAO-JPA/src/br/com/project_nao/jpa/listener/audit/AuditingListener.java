@@ -1,13 +1,13 @@
-package br.com.project_nao.jpa.entity.common.listener;
+package br.com.project_nao.jpa.listener.audit;
 
 import java.io.Serializable;
 
-import javax.annotation.PreDestroy;
 import javax.persistence.PrePersist;
+import javax.persistence.PreRemove;
 import javax.persistence.PreUpdate;
 
+import br.com.project_nao.helper.enumerator.EAuditAction;
 import br.com.project_nao.jpa.entity.common.AEntity;
-import br.com.project_nao.jpa.entity.common.EAuditAction;
 
 public class AuditingListener  implements Serializable {
 
@@ -29,7 +29,7 @@ public class AuditingListener  implements Serializable {
 		}
 	}
 	
-	@PreDestroy
+	@PreRemove
 	public <T extends AEntity<? extends AEntity<?>>> void preDestroy(T entity) {
 		if (entity.isAuditActionPresent(EAuditAction.DELETE)) {
 			// TODO GRAVAR AUDITORIA PARA EXCLUSÃO

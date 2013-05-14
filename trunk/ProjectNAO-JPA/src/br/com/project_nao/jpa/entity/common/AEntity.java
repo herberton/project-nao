@@ -5,11 +5,13 @@ import java.io.Serializable;
 import javax.persistence.EmbeddedId;
 import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
-import javax.persistence.OneToOne;
+import javax.persistence.Transient;
 
-import br.com.project_nao.jpa.entity.common.ai.AuditedEntityAI;
-import br.com.project_nao.jpa.entity.common.listener.AuditingListener;
-import br.com.project_nao.jpa.entity.common.pk.PK;
+import br.com.project_nao.helper.da.AuditedEntityDA;
+import br.com.project_nao.helper.enumerator.EAuditAction;
+import br.com.project_nao.jpa.entity.UserEntity;
+import br.com.project_nao.jpa.listener.audit.AuditingListener;
+import br.com.project_nao.jpa.pk.common.PK;
 
 @MappedSuperclass
 @EntityListeners({AuditingListener.class})
@@ -23,7 +25,7 @@ public abstract class AEntity<T extends AEntity<T>> implements Serializable, Com
 	private PK pk;
 	
 	
-	@OneToOne(optional=false, orphanRemoval=true)
+	@Transient
 	private UserEntity loggedUser;
 	
 	
@@ -38,7 +40,7 @@ public abstract class AEntity<T extends AEntity<T>> implements Serializable, Com
 	public void setPk(PK pk) {
 		this.pk = pk;
 	}
-
+	
 	
 	public UserEntity getLoggedUser() {
 		return loggedUser;
@@ -52,8 +54,8 @@ public abstract class AEntity<T extends AEntity<T>> implements Serializable, Com
 		return this.getPk() != null;
 	}
 	public boolean isAuditActionPresent(EAuditAction auditAction) {
-		if (this.getClass().isAnnotationPresent(AuditedEntityAI.class)) {
-			for (EAuditAction action : this.getClass().getAnnotation(AuditedEntityAI.class).actions()) {
+		if (this.getClass().isAnnotationPresent(AuditedEntityDA.class)) {
+			for (EAuditAction action : this.getClass().getAnnotation(AuditedEntityDA.class).actions()) {
 				if (action.equals(auditAction)) {
 					return true;
 				}
