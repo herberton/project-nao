@@ -15,7 +15,7 @@ public class AuditingListener  implements Serializable {
 
 	@PrePersist
 	public <T extends AEntity<? extends AEntity<?>>> void prePersist(T entity) {
-		if (entity.isAuditActionPresent(EAuditAction.CREATE)) {
+		if (entity.isAuditedActionPresent(EAuditAction.CREATE)) {
 			// TODO GRAVAR AUDITORIA PARA CRIAÇÃO
 			System.out.println(entity.getLoggedUser());
 		}
@@ -23,7 +23,7 @@ public class AuditingListener  implements Serializable {
 
 	@PreUpdate
 	public <T extends AEntity<? extends AEntity<?>>> void preUpdate(T entity) {
-		if (entity.isAuditActionPresent(EAuditAction.UPDATE)) {
+		if (entity.isAuditedActionPresent(EAuditAction.UPDATE)) {
 			// TODO GRAVAR AUDITORIA PARA MODIFICAÇÃO
 			System.out.println(entity.getLoggedUser());
 		}
@@ -31,7 +31,7 @@ public class AuditingListener  implements Serializable {
 	
 	@PreRemove
 	public <T extends AEntity<? extends AEntity<?>>> void preDestroy(T entity) {
-		if (entity.isAuditActionPresent(EAuditAction.DELETE)) {
+		if (entity.isAuditedActionPresent(EAuditAction.DELETE)) {
 			// TODO GRAVAR AUDITORIA PARA EXCLUSÃO
 			System.out.println(entity.getLoggedUser());
 		}
