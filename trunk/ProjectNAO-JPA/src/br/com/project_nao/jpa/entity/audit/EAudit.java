@@ -15,12 +15,12 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import br.com.project_nao.helper.enumerator.EAuditAction;
-import br.com.project_nao.jpa.entity.UserEntity;
-import br.com.project_nao.jpa.entity.ViewEntity;
+import br.com.project_nao.jpa.entity.EUser;
+import br.com.project_nao.jpa.entity.EView;
 import br.com.project_nao.jpa.entity.common.AEntity;
 
 @Entity
-public class AuditEntity<T extends AEntity<? extends AEntity<?>>> extends AEntity<AuditEntity<T>> implements Serializable {
+public class EAudit<T extends AEntity<? extends AEntity<?>>> extends AEntity<EAudit<T>> implements Serializable {
 
 	private static final long serialVersionUID = -7937334565322577384L;
 	
@@ -35,13 +35,13 @@ public class AuditEntity<T extends AEntity<? extends AEntity<?>>> extends AEntit
 	private Calendar date;
 	
 	@OneToOne(optional=false)
-	private UserEntity user;
+	private EUser user;
 	@OneToOne(optional=false)
-	private ViewEntity view;
-	@OneToMany(targetEntity=AuditFieldEntity.class, cascade=CascadeType.ALL, mappedBy="audit")
-	private List<AuditFieldEntity<?>> affectedFieldList;
+	private EView view;
+	@OneToMany(targetEntity=EAuditField.class, cascade=CascadeType.ALL, mappedBy="audit")
+	private List<EAuditField<?>> affectedFieldList;
 	
-	public AuditEntity() {
+	public EAudit() {
 		super();
 	}
 	
@@ -70,22 +70,22 @@ public class AuditEntity<T extends AEntity<? extends AEntity<?>>> extends AEntit
 		this.date = date;
 	}
 	
-	public UserEntity getUser() {
+	public EUser getUser() {
 		return this.user;
 	}
-	public void setUser(UserEntity user) {
+	public void setUser(EUser user) {
 		this.user = user;
 	}
-	public ViewEntity getView() {
+	public EView getView() {
 		return this.view;
 	}
-	public void setView(ViewEntity view) {
+	public void setView(EView view) {
 		this.view = view;
 	}
-	public List<AuditFieldEntity<?>> getAffectedFieldList() {
+	public List<EAuditField<?>> getAffectedFieldList() {
 		return this.affectedFieldList;
 	}
-	public void setAffectedFieldList(List<AuditFieldEntity<?>> affectedFieldList) {
+	public void setAffectedFieldList(List<EAuditField<?>> affectedFieldList) {
 		this.affectedFieldList = affectedFieldList;
 	}
 }

@@ -5,11 +5,11 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 @Entity
-public class ViewEntity extends AEntity<ViewEntity> implements Serializable {
+public class EView extends AEntity<EView> implements Serializable {
 
 	private static final long serialVersionUID = 397738860925145388L;
 
-	public ViewEntity() {
+	public EView() {
 		super();
 	}
    

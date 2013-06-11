@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 import br.com.project_nao.jpa.entity.common.AEntity;
 
 @Entity
-public class AuditFieldEntity<T> extends AEntity<AuditFieldEntity<T>> implements Serializable {
+public class EAuditField<T> extends AEntity<EAuditField<T>> implements Serializable {
 
 	private static final long serialVersionUID = -888279857066770198L;
 	
@@ -22,10 +22,10 @@ public class AuditFieldEntity<T> extends AEntity<AuditFieldEntity<T>> implements
 	@Column(nullable=false)
 	private T newValue;
 	
-	@ManyToOne(targetEntity=AuditEntity.class, optional=false)
-	private AuditEntity<? extends AEntity<? extends AEntity<?>>> audit;
+	@ManyToOne(targetEntity=EAudit.class, optional=false)
+	private EAudit<? extends AEntity<? extends AEntity<?>>> audit;
 	
-	public AuditFieldEntity() {
+	public EAuditField() {
 		super();
 	}
    
@@ -54,10 +54,10 @@ public class AuditFieldEntity<T> extends AEntity<AuditFieldEntity<T>> implements
 		this.newValue = newValue;
 	}
 	
-	public AuditEntity<? extends AEntity<? extends AEntity<?>>> getAudit() {
+	public EAudit<? extends AEntity<? extends AEntity<?>>> getAudit() {
 		return this.audit;
 	}
-	public void setAudit(AuditEntity<? extends AEntity<? extends AEntity<?>>> audit) {
+	public void setAudit(EAudit<? extends AEntity<? extends AEntity<?>>> audit) {
 		this.audit = audit;
 	}
 }

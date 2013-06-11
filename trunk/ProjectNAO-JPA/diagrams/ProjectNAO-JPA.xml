@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><entities>
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.UserEntity</entity-name>
+		<entity-name>br.com.project_nao.jpa.entity.EUser</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>90</entity-height>
 		<entity-X-Coordinate>157</entity-X-Coordinate>
@@ -11,7 +11,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.audit.AuditEntity</entity-name>
+		<entity-name>br.com.project_nao.jpa.entity.audit.EAudit</entity-name>
 		<entity-width>135</entity-width>
 		<entity-height>208</entity-height>
 		<entity-X-Coordinate>149</entity-X-Coordinate>
@@ -22,7 +22,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.ViewEntity</entity-name>
+		<entity-name>br.com.project_nao.jpa.entity.EView</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>32</entity-height>
 		<entity-X-Coordinate>-60</entity-X-Coordinate>
@@ -33,7 +33,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.audit.AuditFieldEntity</entity-name>
+		<entity-name>br.com.project_nao.jpa.entity.audit.EAuditField</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>168</entity-height>
 		<entity-X-Coordinate>350</entity-X-Coordinate>

@@ -1,9 +1,9 @@
 #This file contains JPA Diagram Editor settings
-#Wed May 08 23:23:31 BRT 2013
-defaultTableNamePrefix=NAO_
+#Tue Jun 11 17:25:55 BRT 2013
+defaultTableNamePrefix=
 directEditAffectsClass=true
 accessType=field
 diagramFolder=diagrams
 collectionType=list
-oneToManyOldStyle=false
 defaultPackage=br.com.project_nao.jpa.entity
+oneToManyOldStyle=false

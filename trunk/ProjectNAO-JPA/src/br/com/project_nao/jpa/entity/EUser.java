@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 import br.com.project_nao.jpa.entity.common.AEntity;
 
 @Entity
-public class UserEntity extends AEntity<UserEntity> implements Serializable {
+public class EUser extends AEntity<EUser> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -18,7 +18,7 @@ public class UserEntity extends AEntity<UserEntity> implements Serializable {
 	private String password;
 	
 	
-	public UserEntity() {
+	public EUser() {
 		super();
 	}
    

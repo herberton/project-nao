@@ -18,7 +18,7 @@ import javax.persistence.Transient;
 import br.com.project_nao.helper.da.AuditedEntityDA;
 import br.com.project_nao.helper.da.AuditedFieldDA;
 import br.com.project_nao.helper.enumerator.EAuditAction;
-import br.com.project_nao.jpa.entity.UserEntity;
+import br.com.project_nao.jpa.entity.EUser;
 import br.com.project_nao.jpa.listener.audit.AuditingListener;
 
 @MappedSuperclass
@@ -36,7 +36,7 @@ public abstract class AEntity<T extends AEntity<T>> implements Serializable, Com
 	
 	
 	@Transient
-	private UserEntity loggedUser;
+	private EUser loggedUser;
 	
 	
 	public AEntity() {
@@ -52,10 +52,10 @@ public abstract class AEntity<T extends AEntity<T>> implements Serializable, Com
 	}
 	
 	
-	public UserEntity getLoggedUser() {
+	public EUser getLoggedUser() {
 		return loggedUser;
 	}
-	public void setLoggedUser(UserEntity loggedUser) {
+	public void setLoggedUser(EUser loggedUser) {
 		this.loggedUser = loggedUser;
 	}
 	
