@@ -11,7 +11,7 @@ import br.com.project_nao.jpa.entity.common.AEntity;
 @Entity
 public class EAuditField<T> extends AEntity<EAuditField<T>> implements Serializable {
 
-	private static final long serialVersionUID = -888279857066770198L;
+	private static final long serialVersionUID = 1L;
 	
 	@Column(nullable=false)
 	private Class<T> type;

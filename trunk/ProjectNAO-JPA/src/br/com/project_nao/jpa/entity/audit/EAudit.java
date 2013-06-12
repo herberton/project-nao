@@ -22,7 +22,7 @@ import br.com.project_nao.jpa.entity.common.AEntity;
 @Entity
 public class EAudit<T extends AEntity<? extends AEntity<?>>> extends AEntity<EAudit<T>> implements Serializable {
 
-	private static final long serialVersionUID = -7937334565322577384L;
+	private static final long serialVersionUID = 1L;
 	
 	@Column(nullable=false)
 	private Class<T> type;
