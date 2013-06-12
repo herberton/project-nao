@@ -15,9 +15,9 @@ public class ERelationship extends AEntityND<ERelationship> implements Serializa
 
 	
 	@OneToOne(mappedBy="relationship")
-	private EField field;
+	private EProperty property;
 	@ManyToOne
-	private EField targetField;
+	private EProperty targetProperty;
 	
 	
 	public ERelationship() {
@@ -25,16 +25,16 @@ public class ERelationship extends AEntityND<ERelationship> implements Serializa
 	}
    
 	
-	public EField getField() {
-		return field;
+	public EProperty getProperty() {
+		return property;
 	}
-	public void setField(EField field) {
-		this.field = field;
+	public void setProperty(EProperty property) {
+		this.property = property;
 	}
-	public EField getTargetField() {
-		return targetField;
+	public EProperty getTargetProperty() {
+		return targetProperty;
 	}
-	public void setTargetField(EField targetField) {
-		this.targetField = targetField;
+	public void setTargetProperty(EProperty targetProperty) {
+		this.targetProperty = targetProperty;
 	}
 }

@@ -10,7 +10,7 @@ import javax.persistence.OneToMany;
 import br.com.project_nao.jpa.entity.common.AEntityND;
 
 @Entity
-public class EType extends AEntityND<EType> implements Serializable {
+public class EPropertyType extends AEntityND<EPropertyType> implements Serializable {
 
 	
 	private static final long serialVersionUID = 1L;
@@ -18,11 +18,11 @@ public class EType extends AEntityND<EType> implements Serializable {
 	@Column
 	private Class<?> type;
 	
-	@OneToMany(mappedBy="fieldType")
+	@OneToMany(mappedBy="type")
 	private List<EValidation> validationList;
 	
 	
-	public EType() {
+	public EPropertyType() {
 		super();
 	}
 

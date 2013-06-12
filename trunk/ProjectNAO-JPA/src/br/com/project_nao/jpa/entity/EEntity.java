@@ -15,8 +15,8 @@ public class EEntity extends AEntityND<EEntity> implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	
-	@OneToMany
-	private List<EField> fieldList;
+	@OneToMany(mappedBy="entity")
+	private List<EProperty> propertyList;
 	@OneToMany(mappedBy="entity")
 	private List<EInstance> instanceList;
 	
@@ -26,11 +26,11 @@ public class EEntity extends AEntityND<EEntity> implements Serializable {
 	}
 	
 	
-	public List<EField> getFieldList() {
-		return fieldList;
+	public List<EProperty> getPropertyList() {
+		return propertyList;
 	}
-	public void setFieldList(List<EField> fieldList) {
-		this.fieldList = fieldList;
+	public void setPropertyList(List<EProperty> propertyList) {
+		this.propertyList = propertyList;
 	}
 	public List<EInstance> getInstanceList() {
 		return instanceList;

@@ -2,51 +2,57 @@ package br.com.project_nao.jpa.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 
 import br.com.project_nao.jpa.entity.common.AEntityND;
 
 @Entity
-@Inheritance(strategy=InheritanceType.JOINED)
 public class EField extends AEntityND<EField> implements Serializable {
-
 	
 	private static final long serialVersionUID = 1L;
+
 	
-		
+	@Column
+	private Integer order;
+	
 	@ManyToOne
-	private EEntity entity;
+	private EFormulary formulary;
 	@ManyToOne
-	private EType fieldType;
-	@OneToOne
-	private ERelationship relationship;
+	private EComponent component;
+	@ManyToOne
+	private EProperty property;
 	
 	
 	public EField() {
 		super();
 	}
+
 	
+	public Integer getOrder() {
+		return order;
+	}
+	public void setOrder(Integer order) {
+		this.order = order;
+	}
 	
-	public EEntity getEntity() {
-		return entity;
+	public EFormulary getFormulary() {
+		return formulary;
 	}
-	public void setEntity(EEntity entity) {
-		this.entity = entity;
+	public void setFormulary(EFormulary formulary) {
+		this.formulary = formulary;
 	}
-	public EType getFieldType() {
-		return fieldType;
+	public EComponent getComponent() {
+		return component;
 	}
-	public void setFieldType(EType fieldType) {
-		this.fieldType = fieldType;
+	public void setComponent(EComponent component) {
+		this.component = component;
 	}
-	public ERelationship getRelationship() {
-		return relationship;
+	public EProperty getProperty() {
+		return property;
 	}
-	public void setRelationship(ERelationship relationship) {
-		this.relationship = relationship;
+	public void setProperty(EProperty property) {
+		this.property = property;
 	}
 }

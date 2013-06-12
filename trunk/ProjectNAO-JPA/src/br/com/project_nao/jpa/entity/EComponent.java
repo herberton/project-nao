@@ -3,29 +3,26 @@ package br.com.project_nao.jpa.entity;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 import br.com.project_nao.jpa.entity.common.AEntityN;
 
 @Entity
-public class EValidation extends AEntityN<EValidation> implements Serializable {
+public class EComponent extends AEntityN<EComponent> implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-
 	
-	@ManyToOne
-	private EPropertyType type;
+	@OneToOne
+	private EComponentType type;
 	
-	
-	public EValidation() {
+	public EComponent() {
 		super();
 	}
    
-	
-	public EPropertyType getType() {
+	public EComponentType getType() {
 		return type;
 	}
-	public void setType(EPropertyType type) {
+	public void setType(EComponentType type) {
 		this.type = type;
 	}
 }

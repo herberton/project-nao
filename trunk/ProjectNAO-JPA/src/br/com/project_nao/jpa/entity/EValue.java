@@ -17,7 +17,7 @@ public class EValue<T> extends AEntity<EValue<T>> implements Serializable {
 	@ManyToOne
 	private EInstance instance;
 	@ManyToOne
-	private EField field;
+	private EProperty property;
 	
 	
 	public EValue() {
@@ -42,10 +42,10 @@ public class EValue<T> extends AEntity<EValue<T>> implements Serializable {
 	public void setInstance(EInstance instance) {
 		this.instance = instance;
 	}
-	public EField getField() {
-		return field;
+	public EProperty getProperty() {
+		return property;
 	}
-	public void setField(EField field) {
-		this.field = field;
+	public void setProperty(EProperty property) {
+		this.property = property;
 	}
 }
