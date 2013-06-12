@@ -28,7 +28,9 @@ public class EProperty extends AEntityND<EProperty> implements Serializable {
 	private ERelationship relationship;
 	@OneToMany(mappedBy="property")
 	private List<EField> fieldList;
-	
+	@OneToMany(mappedBy="property")
+	private List<EValue<?>> valueList;
+
 	
 	public EProperty() {
 		super();
@@ -58,5 +60,11 @@ public class EProperty extends AEntityND<EProperty> implements Serializable {
 	}
 	public void setFieldList(List<EField> fieldList) {
 		this.fieldList = fieldList;
+	}
+	public List<EValue<?>> getValueList() {
+		return valueList;
+	}
+	public void setValueList(List<EValue<?>> valueList) {
+		this.valueList = valueList;
 	}
 }

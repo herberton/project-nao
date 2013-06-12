@@ -1,10 +1,12 @@
 package br.com.project_nao.jpa.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import br.com.project_nao.jpa.entity.common.AEntityND;
 
@@ -18,10 +20,15 @@ public class EField extends AEntityND<EField> implements Serializable {
 	private Integer order;
 	
 	@ManyToOne
+	private EField parentField;
+	@OneToMany(mappedBy="parentField")
+	private List<EField> childFieldList;
+	
+	@ManyToOne
 	private EFormulary formulary;
 	@ManyToOne
 	private EComponent component;
-	@ManyToOne
+	@ManyToOne(optional=true)
 	private EProperty property;
 	
 	
@@ -37,6 +44,18 @@ public class EField extends AEntityND<EField> implements Serializable {
 		this.order = order;
 	}
 	
+	public EField getParentField() {
+		return parentField;
+	}
+	public void setParentField(EField parentField) {
+		this.parentField = parentField;
+	}
+	public List<EField> getChildFieldList() {
+		return childFieldList;
+	}
+	public void setChildFieldList(List<EField> childFieldList) {
+		this.childFieldList = childFieldList;
+	}
 	public EFormulary getFormulary() {
 		return formulary;
 	}

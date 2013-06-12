@@ -12,13 +12,15 @@ public class EComponent extends AEntityN<EComponent> implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
+	
 	@OneToOne
 	private EComponentType type;
-	
+		
 	public EComponent() {
 		super();
 	}
    
+	
 	public EComponentType getType() {
 		return type;
 	}
