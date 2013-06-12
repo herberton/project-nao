@@ -15,8 +15,10 @@ public class EEntity extends AEntityND<EEntity> implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	
-	@OneToMany(mappedBy="entity")
+	@OneToMany
 	private List<EField> fieldList;
+	@OneToMany(mappedBy="entity")
+	private List<EInstance> instanceList;
 	
 	
 	public EEntity() {
@@ -29,5 +31,11 @@ public class EEntity extends AEntityND<EEntity> implements Serializable {
 	}
 	public void setFieldList(List<EField> fieldList) {
 		this.fieldList = fieldList;
+	}
+	public List<EInstance> getInstanceList() {
+		return instanceList;
+	}
+	public void setInstanceList(List<EInstance> instanceList) {
+		this.instanceList = instanceList;
 	}
 }
