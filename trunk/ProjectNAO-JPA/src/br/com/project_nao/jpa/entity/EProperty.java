@@ -24,7 +24,7 @@ public class EProperty extends AEntityND<EProperty> implements Serializable {
 	private EEntity entity;
 	@ManyToOne
 	private EPropertyType type;
-	@OneToOne
+	@OneToOne(optional=true)
 	private ERelationship relationship;
 	@OneToMany(mappedBy="property")
 	private List<EField> fieldList;

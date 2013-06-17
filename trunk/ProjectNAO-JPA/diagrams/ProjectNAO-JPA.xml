@@ -3,7 +3,7 @@
 		<entity-name>br.com.project_nao.jpa.entity.ERelationship</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>90</entity-height>
-		<entity-X-Coordinate>700</entity-X-Coordinate>
+		<entity-X-Coordinate>699</entity-X-Coordinate>
 		<entity-Y-Coordinate>38</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
@@ -58,8 +58,19 @@
 		<entity-name>br.com.project_nao.jpa.entity.EValue</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>128</entity-height>
-		<entity-X-Coordinate>89</entity-X-Coordinate>
-		<entity-Y-Coordinate>5</entity-Y-Coordinate>
+		<entity-X-Coordinate>367</entity-X-Coordinate>
+		<entity-Y-Coordinate>221</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>br.com.project_nao.jpa.entity.EMenu</entity-name>
+		<entity-width>138</entity-width>
+		<entity-height>110</entity-height>
+		<entity-X-Coordinate>835</entity-X-Coordinate>
+		<entity-Y-Coordinate>-782</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -70,18 +81,7 @@
 		<entity-width>120</entity-width>
 		<entity-height>108</entity-height>
 		<entity-X-Coordinate>367</entity-X-Coordinate>
-		<entity-Y-Coordinate>-303</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
-
-	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EMenu</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>110</entity-height>
-		<entity-X-Coordinate>844</entity-X-Coordinate>
-		<entity-Y-Coordinate>-781</entity-Y-Coordinate>
+		<entity-Y-Coordinate>-190</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -91,8 +91,8 @@
 		<entity-name>br.com.project_nao.jpa.entity.EEntity</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>90</entity-height>
-		<entity-X-Coordinate>367</entity-X-Coordinate>
-		<entity-Y-Coordinate>240</entity-Y-Coordinate>
+		<entity-X-Coordinate>89</entity-X-Coordinate>
+		<entity-Y-Coordinate>38</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -110,17 +110,6 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EComponentType</entity-name>
-		<entity-width>142</entity-width>
-		<entity-height>90</entity-height>
-		<entity-X-Coordinate>1103</entity-X-Coordinate>
-		<entity-Y-Coordinate>18</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
-
-	<entity>
 		<entity-name>br.com.project_nao.jpa.entity.EFormulary</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>90</entity-height>
@@ -132,11 +121,22 @@
 	</entity>
 
 	<entity>
+		<entity-name>br.com.project_nao.jpa.entity.EComponentType</entity-name>
+		<entity-width>142</entity-width>
+		<entity-height>90</entity-height>
+		<entity-X-Coordinate>1103</entity-X-Coordinate>
+		<entity-Y-Coordinate>18</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
 		<entity-name>br.com.project_nao.jpa.entity.EValidation</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>70</entity-height>
 		<entity-X-Coordinate>367</entity-X-Coordinate>
-		<entity-Y-Coordinate>-501</entity-Y-Coordinate>
+		<entity-Y-Coordinate>-350</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
