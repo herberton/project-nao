@@ -30,6 +30,8 @@ public class EField extends AEntityND<EField> implements Serializable {
 	private EComponent component;
 	@ManyToOne(optional=true)
 	private EProperty property;
+	@OneToMany
+	private List<EConfiguration> configurationList;
 	
 	
 	public EField() {
@@ -73,5 +75,11 @@ public class EField extends AEntityND<EField> implements Serializable {
 	}
 	public void setProperty(EProperty property) {
 		this.property = property;
+	}
+	public List<EConfiguration> getConfigurationList() {
+		return configurationList;
+	}
+	public void setConfigurationList(List<EConfiguration> configurationList) {
+		this.configurationList = configurationList;
 	}
 }
