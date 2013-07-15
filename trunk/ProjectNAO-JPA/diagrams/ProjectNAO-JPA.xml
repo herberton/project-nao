@@ -156,9 +156,20 @@
 	<entity>
 		<entity-name>br.com.project_nao.jpa.entity.EConfiguration</entity-name>
 		<entity-width>120</entity-width>
-		<entity-height>90</entity-height>
-		<entity-X-Coordinate>1341</entity-X-Coordinate>
+		<entity-height>108</entity-height>
+		<entity-X-Coordinate>1274</entity-X-Coordinate>
 		<entity-Y-Coordinate>-77</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>br.com.project_nao.jpa.entity.EOption</entity-name>
+		<entity-width>135</entity-width>
+		<entity-height>70</entity-height>
+		<entity-X-Coordinate>1266</entity-X-Coordinate>
+		<entity-Y-Coordinate>145</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>

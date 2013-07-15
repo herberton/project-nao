@@ -1,18 +1,24 @@
 package br.com.project_nao.jpa.entity;
 
-import br.com.project_nao.jpa.entity.common.AEntity;
 import java.io.Serializable;
-import javax.persistence.*;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+
+import br.com.project_nao.jpa.entity.common.AEntity;
 
 @Entity
 public class EConfiguration extends AEntity<EConfiguration> implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 
-	@Column
-	private String key;
+	
 	@Column
 	private String value;
+	
+	@ManyToOne
+	private EOption option;
 	
 	
 	public EConfiguration() {
@@ -20,16 +26,17 @@ public class EConfiguration extends AEntity<EConfiguration> implements Serializa
 	}
    
 	
-	public String getKey() {
-		return key;
-	}
-	public void setKey(String key) {
-		this.key = key;
-	}
 	public String getValue() {
 		return value;
 	}
 	public void setValue(String value) {
 		this.value = value;
+	}
+	
+	public EOption getOption() {
+		return option;
+	}
+	public void setOption(EOption option) {
+		this.option = option;
 	}
 }
