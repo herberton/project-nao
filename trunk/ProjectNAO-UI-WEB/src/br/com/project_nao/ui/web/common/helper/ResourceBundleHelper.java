@@ -1,4 +1,4 @@
-package br.com.project_nao.ui.web.common.helper.jsf;
+package br.com.project_nao.ui.web.common.helper;
 
 import java.io.Serializable;
 import java.util.Locale;

@@ -10,7 +10,7 @@ import javax.faces.event.PhaseListener;
 import javax.faces.render.ResponseStateManager;
 import javax.servlet.http.HttpServletRequest;
 
-import br.com.project_nao.ui.web.common.helper.jsf.JSFHelper;
+import br.com.project_nao.ui.web.common.helper.JSFHelper;
 
 import com.sun.faces.RIConstants;
 import com.sun.faces.renderkit.RenderKitUtils;

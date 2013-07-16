@@ -10,19 +10,31 @@
 	<session-config>
 		<session-timeout>10</session-timeout>
 	</session-config>
+	<error-page>
+		<exception-type>javax.faces.application.ViewExpiredException</exception-type>
+		<location>/login.xhtml</location>
+	</error-page>
 	<servlet>
-		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-name>FacesServlet</servlet-name>
 		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
 		<load-on-startup>2</load-on-startup>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Faces Servlet</servlet-name>
-		<url-pattern>*.jsf</url-pattern>
+		<servlet-name>FacesServlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
 	<context-param>
 		<param-name>primefaces.THEME</param-name>
 		<param-value>#{sessionMB.theme}</param-value>
 	</context-param>
+	<filter>
+		<filter-name>Character Encoding Filter</filter-name>
+	    <filter-class>br.com.project_nao.ui.web.application.filter.CharacterEncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	    <filter-name>Character Encoding Filter</filter-name>
+	    <servlet-name>FacesServlet</servlet-name>
+	</filter-mapping>
 	<filter>
 		<filter-name>PrimeFaces FileUpload Filter</filter-name>
 		<filter-class>org.primefaces.webapp.filter.FileUploadFilter</filter-class>

@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><entities>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities>
 	<entity>
 		<entity-name>br.com.project_nao.jpa.entity.ERelationship</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>90</entity-height>
-		<entity-X-Coordinate>899</entity-X-Coordinate>
-		<entity-Y-Coordinate>38</entity-Y-Coordinate>
+		<entity-X-Coordinate>755</entity-X-Coordinate>
+		<entity-Y-Coordinate>135</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -47,8 +48,8 @@
 		<entity-name>br.com.project_nao.jpa.entity.EField</entity-name>
 		<entity-width>144</entity-width>
 		<entity-height>208</entity-height>
-		<entity-X-Coordinate>1071</entity-X-Coordinate>
-		<entity-Y-Coordinate>-362</entity-Y-Coordinate>
+		<entity-X-Coordinate>1038</entity-X-Coordinate>
+		<entity-Y-Coordinate>-364</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -99,11 +100,33 @@
 	</entity>
 
 	<entity>
+		<entity-name>br.com.project_nao.jpa.entity.EConfiguration</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>90</entity-height>
+		<entity-X-Coordinate>1341</entity-X-Coordinate>
+		<entity-Y-Coordinate>-221</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
 		<entity-name>br.com.project_nao.jpa.entity.EItemMenu</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>90</entity-height>
 		<entity-X-Coordinate>1071</entity-X-Coordinate>
-		<entity-Y-Coordinate>-707</entity-Y-Coordinate>
+		<entity-Y-Coordinate>-750</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>br.com.project_nao.jpa.entity.EFormulary</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>90</entity-height>
+		<entity-X-Coordinate>852</entity-X-Coordinate>
+		<entity-Y-Coordinate>-559</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -115,17 +138,6 @@
 		<entity-height>90</entity-height>
 		<entity-X-Coordinate>538</entity-X-Coordinate>
 		<entity-Y-Coordinate>-589</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
-
-	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EFormulary</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>90</entity-height>
-		<entity-X-Coordinate>772</entity-X-Coordinate>
-		<entity-Y-Coordinate>-527</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -148,28 +160,6 @@
 		<entity-height>130</entity-height>
 		<entity-X-Coordinate>1263</entity-X-Coordinate>
 		<entity-Y-Coordinate>-579</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
-
-	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EConfiguration</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>108</entity-height>
-		<entity-X-Coordinate>1274</entity-X-Coordinate>
-		<entity-Y-Coordinate>-77</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
-
-	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EOption</entity-name>
-		<entity-width>135</entity-width>
-		<entity-height>70</entity-height>
-		<entity-X-Coordinate>1266</entity-X-Coordinate>
-		<entity-Y-Coordinate>145</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>

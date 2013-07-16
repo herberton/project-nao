@@ -1,4 +1,4 @@
-package br.com.project_nao.helper.string;
+package br.com.project_nao.helper;
 
 import java.io.Serializable;
 

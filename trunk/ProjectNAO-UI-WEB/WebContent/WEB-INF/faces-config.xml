@@ -23,6 +23,7 @@
 		</system-event-listener>
 	</application>
 	<lifecycle>
+		<phase-listener>br.com.project_nao.ui.web.application.pl.AuthenticationPL</phase-listener>
 		<phase-listener>br.com.project_nao.ui.web.application.pl.RestoreDynamicActionsObserverPL</phase-listener>
 	</lifecycle>
 </faces-config>
