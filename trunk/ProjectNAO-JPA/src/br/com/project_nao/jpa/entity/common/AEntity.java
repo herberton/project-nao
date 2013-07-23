@@ -15,9 +15,9 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Transient;
 
-import br.com.project_nao.helper.da.AuditedEntityDA;
-import br.com.project_nao.helper.da.AuditedFieldDA;
-import br.com.project_nao.helper.enumerator.EAuditAction;
+import br.com.nao.helper.da.AuditedEntityDA;
+import br.com.nao.helper.da.AuditedFieldDA;
+import br.com.nao.helper.enumerator.EAuditAction;
 import br.com.project_nao.jpa.entity.EUser;
 import br.com.project_nao.jpa.listener.audit.AuditingListener;
 

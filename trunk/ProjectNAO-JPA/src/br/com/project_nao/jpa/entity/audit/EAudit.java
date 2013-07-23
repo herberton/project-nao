@@ -14,7 +14,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import br.com.project_nao.helper.enumerator.EAuditAction;
+import br.com.nao.helper.enumerator.EAuditAction;
 import br.com.project_nao.jpa.entity.EUser;
 import br.com.project_nao.jpa.entity.EView;
 import br.com.project_nao.jpa.entity.common.AEntity;

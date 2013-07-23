@@ -6,7 +6,7 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreRemove;
 import javax.persistence.PreUpdate;
 
-import br.com.project_nao.helper.enumerator.EAuditAction;
+import br.com.nao.helper.enumerator.EAuditAction;
 import br.com.project_nao.jpa.entity.common.AEntity;
 
 public class AuditingListener  implements Serializable {
