@@ -29,7 +29,7 @@
 	</context-param>
 	<filter>
 		<filter-name>Character Encoding Filter</filter-name>
-	    <filter-class>br.com.project_nao.ui.web.application.filter.CharacterEncodingFilter</filter-class>
+	    <filter-class>br.com.nao.ui.web.application.filter.CharacterEncodingFilter</filter-class>
 	</filter>
 	<filter-mapping>
 	    <filter-name>Character Encoding Filter</filter-name>

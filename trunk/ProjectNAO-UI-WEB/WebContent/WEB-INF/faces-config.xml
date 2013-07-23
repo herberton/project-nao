@@ -13,17 +13,17 @@
 			<supported-locale>es_ES</supported-locale>
 		</locale-config>
 		<resource-bundle>
-			<base-name>br.com.project_nao.ui.web.common.i18n.application</base-name>
+			<base-name>br.com.nao.ui.web.common.i18n.application</base-name>
 			<var>i18n</var>
 		</resource-bundle>
-		<message-bundle>br.com.project_nao.ui.web.common.i18n.application</message-bundle>
+		<message-bundle>br.com.nao.ui.web.common.i18n.application</message-bundle>
 		<system-event-listener>
-		   <system-event-listener-class>br.com.project_nao.ui.web.application.sel.ApplicationSEL</system-event-listener-class>
+		   <system-event-listener-class>br.com.nao.ui.web.application.sel.ApplicationSEL</system-event-listener-class>
 		   <system-event-class>javax.faces.event.PostConstructApplicationEvent</system-event-class>    					
 		</system-event-listener>
 	</application>
 	<lifecycle>
-		<phase-listener>br.com.project_nao.ui.web.application.pl.AuthenticationPL</phase-listener>
-		<phase-listener>br.com.project_nao.ui.web.application.pl.RestoreDynamicActionsObserverPL</phase-listener>
+		<phase-listener>br.com.nao.ui.web.application.pl.AuthenticationPL</phase-listener>
+		<phase-listener>br.com.nao.ui.web.application.pl.RestoreDynamicActionsObserverPL</phase-listener>
 	</lifecycle>
 </faces-config>
