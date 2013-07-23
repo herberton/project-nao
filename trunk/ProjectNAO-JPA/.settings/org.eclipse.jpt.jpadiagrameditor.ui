@@ -5,5 +5,5 @@ directEditAffectsClass=true
 accessType=field
 diagramFolder=diagrams
 collectionType=list
-defaultPackage=br.com.project_nao.jpa.entity
+defaultPackage=br.com.nao.jpa.entity
 oneToManyOldStyle=false

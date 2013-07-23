@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <entities>
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.ERelationship</entity-name>
+		<entity-name>br.com.nao.jpa.entity.ERelationship</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>90</entity-height>
 		<entity-X-Coordinate>755</entity-X-Coordinate>
@@ -12,7 +12,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EProperty</entity-name>
+		<entity-name>br.com.nao.jpa.entity.EProperty</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>150</entity-height>
 		<entity-X-Coordinate>367</entity-X-Coordinate>
@@ -23,7 +23,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EInstance</entity-name>
+		<entity-name>br.com.nao.jpa.entity.EInstance</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>90</entity-height>
 		<entity-X-Coordinate>89</entity-X-Coordinate>
@@ -34,7 +34,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EComponent</entity-name>
+		<entity-name>br.com.nao.jpa.entity.EComponent</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>70</entity-height>
 		<entity-X-Coordinate>549</entity-X-Coordinate>
@@ -45,7 +45,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EField</entity-name>
+		<entity-name>br.com.nao.jpa.entity.EField</entity-name>
 		<entity-width>144</entity-width>
 		<entity-height>208</entity-height>
 		<entity-X-Coordinate>1038</entity-X-Coordinate>
@@ -56,7 +56,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EValue</entity-name>
+		<entity-name>br.com.nao.jpa.entity.EValue</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>128</entity-height>
 		<entity-X-Coordinate>367</entity-X-Coordinate>
@@ -67,7 +67,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EMenu</entity-name>
+		<entity-name>br.com.nao.jpa.entity.EMenu</entity-name>
 		<entity-width>138</entity-width>
 		<entity-height>110</entity-height>
 		<entity-X-Coordinate>835</entity-X-Coordinate>
@@ -78,7 +78,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EPropertyType</entity-name>
+		<entity-name>br.com.nao.jpa.entity.EPropertyType</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>108</entity-height>
 		<entity-X-Coordinate>367</entity-X-Coordinate>
@@ -89,7 +89,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EEntity</entity-name>
+		<entity-name>br.com.nao.jpa.entity.EEntity</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>90</entity-height>
 		<entity-X-Coordinate>89</entity-X-Coordinate>
@@ -100,7 +100,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EConfiguration</entity-name>
+		<entity-name>br.com.nao.jpa.entity.EConfiguration</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>90</entity-height>
 		<entity-X-Coordinate>1341</entity-X-Coordinate>
@@ -111,7 +111,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EItemMenu</entity-name>
+		<entity-name>br.com.nao.jpa.entity.EItemMenu</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>90</entity-height>
 		<entity-X-Coordinate>1071</entity-X-Coordinate>
@@ -122,7 +122,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EFormulary</entity-name>
+		<entity-name>br.com.nao.jpa.entity.EFormulary</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>90</entity-height>
 		<entity-X-Coordinate>852</entity-X-Coordinate>
@@ -133,7 +133,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EComponentType</entity-name>
+		<entity-name>br.com.nao.jpa.entity.EComponentType</entity-name>
 		<entity-width>142</entity-width>
 		<entity-height>90</entity-height>
 		<entity-X-Coordinate>538</entity-X-Coordinate>
@@ -144,7 +144,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EValidation</entity-name>
+		<entity-name>br.com.nao.jpa.entity.EValidation</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>70</entity-height>
 		<entity-X-Coordinate>367</entity-X-Coordinate>
@@ -155,7 +155,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>br.com.project_nao.jpa.entity.EView</entity-name>
+		<entity-name>br.com.nao.jpa.entity.EView</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>130</entity-height>
 		<entity-X-Coordinate>1263</entity-X-Coordinate>
