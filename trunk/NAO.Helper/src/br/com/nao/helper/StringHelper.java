@@ -5,18 +5,20 @@ import java.util.List;
 
 public class StringHelper {
 	
-	public static <T> String getDefaultPropertyNameFrom(Class<T> clazz){
+	public static <T> String getI18N(Class<T> clazz){
 		return clazz.getSimpleName().substring(0, 1).toLowerCase() + clazz.getSimpleName().subSequence(1, clazz.getSimpleName().length());
 	}
-
-	public static String getGetMethodName(String fieldName) {
+	public static String getGetter(String fieldName) {
 		return String.format("get%s", fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1, fieldName.length()));
+	}
+	public static String getSetter(String fieldName) {
+		return String.format("set%s", fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1, fieldName.length()));
 	}
 	
 	public static boolean isNullOrEmpty(String string) {
 		return string == null || string.isEmpty();
 	}
-
+	
 	public static String isNullOrEmptyReplaceBy(String string, String...valueArray) {
 		
 		if (StringHelper.isNullOrEmpty(string)) {

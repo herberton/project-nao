@@ -42,15 +42,15 @@ public class LocaleHelper implements Serializable {
 		return language;
 	}
 	public void setLanguage(Language language) {
-		this.language = language == null ? Language.pt_BR : language;
+		this.language = language == null ? Language.PT_BR : language;
 
 		switch (this.getLanguage()) {
-			case es_ES:
+			case ES_ES:
 				this.setFullTextlanguage("Español - ES");
 				this.setIconName("icoES.png");
 				this.setLocale(new Locale("es", "ES"));
 				break;
-			case en_US:
+			case EN_US:
 				this.setFullTextlanguage("English - US");
 				this.setIconName("icoUS.png");
 				this.setLocale(Locale.US);
@@ -66,9 +66,9 @@ public class LocaleHelper implements Serializable {
 	
 	public static Collection<LocaleHelper> getSupportedLocalecCollection() {
 		Collection<LocaleHelper> supportedLocaleCollection = new ArrayList<LocaleHelper>();
-		supportedLocaleCollection.add(new LocaleHelper(Language.pt_BR));
-		supportedLocaleCollection.add(new LocaleHelper(Language.en_US));
-		supportedLocaleCollection.add(new LocaleHelper(Language.es_ES));
+		supportedLocaleCollection.add(new LocaleHelper(Language.PT_BR));
+		supportedLocaleCollection.add(new LocaleHelper(Language.EN_US));
+		supportedLocaleCollection.add(new LocaleHelper(Language.ES_ES));
 		return supportedLocaleCollection;
 	}
 	public static LocaleHelper getInstence(Language language) {
