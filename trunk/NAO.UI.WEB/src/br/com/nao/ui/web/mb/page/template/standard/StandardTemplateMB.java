@@ -5,7 +5,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
 import lombok.Getter;
-import br.com.nao.ejb.sb.bo.UserBORemote;
+import br.com.nao.ejb.sb.bo.crud.UserBORemote;
 import br.com.nao.ui.web.mb.common.NAOMB;
 
 @ViewScoped

@@ -30,6 +30,7 @@ import br.com.nao.helper.ValidateHelper;
 import br.com.nao.jpa.entity.common.NAOEntity;
 import br.com.nao.to.OrderByTO;
 
+
 @Stateless
 @LocalBean
 @TransactionManagement(TransactionManagementType.CONTAINER)
@@ -155,24 +156,24 @@ public class NAODAO<T extends NAOEntity<? extends NAOEntity<?>>> implements NAOD
 		return this.createTypedQuery(clazz, parameterMap, jpql, 0, -1);
 	}
 	@SuppressWarnings("unchecked")
-	protected <X extends NAOEntity<? extends NAOEntity<?>>> TypedQuery<X> createTypedQuery(Class<X> clazz, Map<String, Object> parameterMap, String jpql, int firstResult, int maxResult)  throws NAOException {
+	protected <X extends NAOEntity<? extends NAOEntity<?>>> TypedQuery<X> createTypedQuery(Class<X> clazz, Map<String, Object> parameterMap, String jpql, Integer firstResult, Integer maxResult)  throws NAOException {
 		return (TypedQuery<X>) this.createQuery(clazz, parameterMap, jpql, firstResult, maxResult);
 	}
 	
 	protected <X extends NAOEntity<? extends NAOEntity<?>>> Query createQuery(Class<X> clazz, Map<String, Object> parameterMap, String jpql)  throws NAOException {
 		return this.createQuery(clazz, parameterMap, jpql, 0, -1);
 	}
-	protected <X extends NAOEntity<? extends NAOEntity<?>>> Query createQuery(Class<X> clazz, Map<String, Object> parameterMap, String jpql, int firstResult, int maxResult) throws NAOException {
+	protected <X extends NAOEntity<? extends NAOEntity<?>>> Query createQuery(Class<X> clazz, Map<String, Object> parameterMap, String jpql, Integer firstResult, Integer maxResult) throws NAOException {
 		
 		JPQLHelper.println(jpql, parameterMap);
 		
 		Query query = JPQLHelper.bindParameter(this.getEntityManager().createQuery(jpql, clazz), parameterMap);
 			
-		if (firstResult > -1) {
+		if (firstResult != null && firstResult > -1) {
 			query.setFirstResult(firstResult);	
 		}
 		
-		if(maxResult > 0) {
+		if(maxResult != null && maxResult > 0) {
 			query.setMaxResults(maxResult);
 		}
 		

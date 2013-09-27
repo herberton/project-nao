@@ -1,12 +1,12 @@
 package br.com.nao.jpa.entity.common;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.MappedSuperclass;
 
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
+@MappedSuperclass
 public class NameDescriptionEntity<T extends NameDescriptionEntity<T>> extends NameEntity<T> {
 	
 	private static final long serialVersionUID = 3742799029183018437L;

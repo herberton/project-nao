@@ -7,22 +7,32 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.OneToOne;
+import javax.persistence.Transient;
 
 import lombok.Getter;
 import lombok.Setter;
+import br.com.nao.annotation.Audited;
 import br.com.nao.annotation.Display;
+import br.com.nao.contract.ClassInformer;
 import br.com.nao.enumerator.Status;
 import br.com.nao.exception.common.NAOException;
 import br.com.nao.helper.ObjectHelper;
 import br.com.nao.jpa.el.AuditEL;
+import br.com.nao.jpa.entity.AuditEntity;
+import br.com.nao.jpa.entity.UserEntity;
 import br.com.nao.to.common.NAOTO;
 
+@Audited
 @MappedSuperclass
 @EntityListeners({AuditEL.class})
 public class NAOEntity<T extends NAOEntity<T>> 
@@ -30,7 +40,8 @@ public class NAOEntity<T extends NAOEntity<T>>
 		NAOTO<NAOEntity<T>> 
 	implements 
 		Serializable, 
-		Comparable<T>
+		Comparable<T>,
+		ClassInformer
 {
 
 	
@@ -43,12 +54,20 @@ public class NAOEntity<T extends NAOEntity<T>>
 	@Id
 	@GeneratedValue
 	private long id;
+	@Getter
+	@Setter
+	@Column(nullable=false)
+	@Enumerated
+	private Status status;
+	@Getter
+	@Setter
+	@OneToOne(optional=true, cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	private AuditEntity audit;
 	
 	@Getter
 	@Setter
-	@Enumerated
-	private Status status;
-	
+	@Transient
+	private UserEntity loggedUser;
 	
 	@SuppressWarnings("unchecked")
 	public NAOEntity() {
@@ -57,7 +76,7 @@ public class NAOEntity<T extends NAOEntity<T>>
 	
 	
 	public boolean haveId() {
-		return this.getId() != 0;
+		return this.getId() > 0L;
 	}
 	
 	public Map<String, Object> toParameterMap() throws NAOException {
@@ -102,15 +121,22 @@ public class NAOEntity<T extends NAOEntity<T>>
 		return parameterMap;
 	}
 	
+	public boolean isAudited() {
+		return 
+			this.getClass().isAnnotationPresent(Audited.class) && 
+			this.getClass().getAnnotation(Audited.class).value();
+	}
 	
 	@Override
 	public int compareTo(T other) {
 		return 0;
 	}
+	
 	@Override
-	public boolean isValidSuperClass(Class<?> superClass) {
+	public boolean isValidClass(Class<?> clazz) {
 		return 
-			superClass.isAnnotationPresent(Entity.class) ||
-			superClass.isAnnotationPresent(MappedSuperclass.class);
+			clazz != null &&
+			clazz.isAnnotationPresent(Entity.class) ||
+			clazz.isAnnotationPresent(MappedSuperclass.class);
 	}
 }

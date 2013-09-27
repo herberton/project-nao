@@ -1,4 +1,4 @@
-package br.com.nao.ejb.sb.bo;
+package br.com.nao.ejb.sb.bo.crud;
 
 import javax.ejb.Remote;
 

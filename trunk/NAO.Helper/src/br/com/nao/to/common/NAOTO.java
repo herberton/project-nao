@@ -9,14 +9,15 @@ import java.util.List;
 
 import lombok.Getter;
 import lombok.Setter;
-import br.com.nao.contract.PublicFieldListDelegate;
+import br.com.nao.contract.ClassInformer;
+import br.com.nao.contract.ClassValidator;
 import br.com.nao.helper.ReflectionHelper;
 import br.com.nao.helper.StringHelper;
 
-public class NAOTO<T extends NAOTO<? extends T>> 
+public class NAOTO<T extends NAOTO<T>> 
 	implements 
 		Serializable,
-		PublicFieldListDelegate
+		ClassInformer
 {
 
 	private static final long serialVersionUID = -6638017139073613384L;
@@ -30,23 +31,29 @@ public class NAOTO<T extends NAOTO<? extends T>>
 		this.setClazz(clazz);
 	}
 
+	
 	public Object get(String fieldName) {
-		return ReflectionHelper.executeMethod(this, ReflectionHelper.findMethod(this.getClazz(), StringHelper.getGetter(fieldName)));
+		return ReflectionHelper.executeMethod(this, ReflectionHelper.findMethod(this.getClass(), StringHelper.getGetter(fieldName)));
 	}
+	
 	public void set(String fieldName, Object value) {
-		ReflectionHelper.executeMethod(this, ReflectionHelper.findMethod(this.getClazz(), StringHelper.getSetter(fieldName)), value);
+		ReflectionHelper.executeMethod(this, ReflectionHelper.findMethod(this.getClass(), StringHelper.getSetter(fieldName)), value);
 	}
+	
+	@Override
 	public List<Field> getPublicFieldList() {
 		return this.getPublicFieldList(this);
 	}
-	public List<Field> getPublicFieldList(PublicFieldListDelegate delegate) {
+	@Override
+	public List<Field> getPublicFieldList(ClassValidator validator) {
 		
-		Class<?> clazz = this.getClazz();
+		Class<?> clazz = this.getClass();
 		
 		List<Field> fieldList = new ArrayList<Field>();
 		
-		while (clazz != null) {
-	
+		do {
+			
+			
 			for (Field field : clazz.getDeclaredFields()) {
 				
 				Method method = ReflectionHelper.findMethod(clazz, StringHelper.getGetter(field.getName()));
@@ -62,24 +69,20 @@ public class NAOTO<T extends NAOTO<? extends T>>
 				fieldList.add(field);
 			}
 			
-			if (delegate == null) {
-				clazz = clazz.getSuperclass();
-				continue;
-			}
 			
-			if (delegate.isValidSuperClass(clazz.getSuperclass())) {
-				clazz = clazz.getSuperclass();
-				continue;
-			}
+			clazz = clazz.getSuperclass();
 			
-			clazz = null;
-		}
+			
+		} while(validator == null || clazz == null ? clazz != null : validator.isValidClass(clazz));
+		
 		
 		return fieldList;
 	}
-
+	
 	@Override
-	public boolean isValidSuperClass(Class<?> superClass) {
-		return superClass.equals(Object.class);
+	public boolean isValidClass(Class<?> clazz) {
+		return 
+			clazz!= null && 
+			clazz.equals(Object.class);
 	}
 }

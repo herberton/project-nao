@@ -42,19 +42,16 @@ public class NAOException
 	public NAOException(Class<? extends NAOException> clazz) {
 		super();
 		this.setClazz(clazz);
-		this.printStackTrace();
 	}
 	public NAOException(Class<? extends NAOException> clazz, String message) {
 		super(message);
 		this.setClazz(clazz);
 		this.setDetail(new MessageTO(message));
-		this.printStackTrace();
 	}
 	public NAOException(Class<? extends NAOException> clazz, Throwable cause) throws NAOException {
 		super(cause);
 		this.setClazz(clazz);
 		this.setDetail(new MessageTO(cause));
-		this.printStackTrace();
 	}
 	
 	

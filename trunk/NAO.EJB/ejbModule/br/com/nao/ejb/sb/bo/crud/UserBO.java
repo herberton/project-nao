@@ -1,4 +1,4 @@
-package br.com.nao.ejb.sb.bo;
+package br.com.nao.ejb.sb.bo.crud;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
@@ -25,7 +25,12 @@ public class UserBO extends NAOBOCRUD<UserEntity> implements UserBORemote {
 		   user.setName("teste");
 		   user.setStatus(Status.ACTIVE);
 		   
-		   this.save(user);
+		   user = this.save(user, false);
+		   
+		   user = this.select(user);
+		   user.setName("teste 1");
+		   
+		   this.save(user, true);
 		   
 			System.out.println("count is " + this.count(new UserEntity()));
 			

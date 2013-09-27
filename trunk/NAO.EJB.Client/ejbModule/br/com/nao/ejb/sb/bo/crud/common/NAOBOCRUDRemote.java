@@ -11,13 +11,19 @@ import br.com.nao.jpa.entity.common.NAOEntity;
 import br.com.nao.to.OrderByTO;
 
 @Remote
-public interface NAOBOCRUDRemote<T extends NAOEntity<? extends NAOEntity<?>>> extends Serializable {
+public interface NAOBOCRUDRemote<T extends NAOEntity<T>> 
+	extends
+		Serializable 
+{
 	
 	T save(T entity) throws NAOException;
+	T save(T entity, boolean isCommitTransaction) throws NAOException;
 	
 	void delete(T entity) throws NAOException;
+	void delete(T entity, boolean isCommitTransaction) throws NAOException;
 	
 	void remove(T entity) throws NAOException;
+	void remove(T entity, boolean isCommitTransaction) throws NAOException;
 	
 	T select(T entity) throws NAOException;
 	T select(Class<T> clazz, Map<String, Object> parameterMap) throws NAOException;
