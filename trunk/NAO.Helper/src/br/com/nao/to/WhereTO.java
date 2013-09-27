@@ -29,9 +29,7 @@ public class WhereTO extends NAOTO<WhereTO> {
 	}
 	
 	
-	public WhereTO(){
-		super(WhereTO.class);
-	}
+	public WhereTO(){ super(); }
 	public WhereTO(Collection<WhereClauseTO> clauseCollection){
 		this();
 		this.setClauseMapCollection(clauseCollection);

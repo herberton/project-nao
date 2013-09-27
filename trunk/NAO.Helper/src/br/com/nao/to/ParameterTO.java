@@ -33,10 +33,7 @@ public class ParameterTO<T>
 	private T value;
 	
 	
-	@SuppressWarnings("unchecked")
-	public ParameterTO() { 
-		super((Class<ParameterTO<T>>)(Class<?>)ParameterTO.class); 
-	}
+	public ParameterTO() { super(); }
 	@SuppressWarnings("unchecked")
 	public ParameterTO(Integer index, T value) {
 		this();

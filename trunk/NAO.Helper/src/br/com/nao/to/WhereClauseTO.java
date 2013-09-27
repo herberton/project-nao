@@ -20,7 +20,7 @@ public class WhereClauseTO extends NAOTO<WhereClauseTO>  implements Comparable<W
 	private boolean addEntityPrefix = false;
 	
 	public WhereClauseTO(String field, WhereClauseOperator operator, boolean addEntityPrefix) {
-		super(WhereClauseTO.class);
+		super();
 		this.setField(field);
 		this.setOperator(operator);
 		this.setAddEntityPrefix(addEntityPrefix);

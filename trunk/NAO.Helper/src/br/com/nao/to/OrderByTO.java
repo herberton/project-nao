@@ -26,9 +26,7 @@ public class OrderByTO extends NAOTO<OrderByTO> {
 	}
 	
 	
-	public OrderByTO() {
-		super(OrderByTO.class);
-	}
+	public OrderByTO() { super(); }
 	public OrderByTO(String field, OrderByType type) throws InvalidParameterException {
 		this();
 		this.addOrderBy(field, type);

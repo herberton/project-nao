@@ -69,10 +69,8 @@ public class NAOEntity<T extends NAOEntity<T>>
 	@Transient
 	private UserEntity loggedUser;
 	
-	@SuppressWarnings("unchecked")
-	public NAOEntity() {
-		super((Class<NAOEntity<T>>)(Class<?>)NAOEntity.class);
-	}
+	
+	public NAOEntity() { super(); }
 	
 	
 	public boolean haveId() {

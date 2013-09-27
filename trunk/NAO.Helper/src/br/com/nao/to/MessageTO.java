@@ -30,9 +30,7 @@ public class MessageTO extends NAOTO<MessageTO> {
 	}
 	
 	
-	public MessageTO() {
-		super(MessageTO.class);
-	}
+	public MessageTO() { super(); }
 	public MessageTO(String text) {
 		this();
 		this.setText(text);

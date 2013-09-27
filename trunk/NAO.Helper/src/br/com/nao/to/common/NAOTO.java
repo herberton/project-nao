@@ -7,8 +7,6 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 
-import lombok.Getter;
-import lombok.Setter;
 import br.com.nao.contract.ClassInformer;
 import br.com.nao.contract.ClassValidator;
 import br.com.nao.helper.ReflectionHelper;
@@ -22,14 +20,8 @@ public class NAOTO<T extends NAOTO<T>>
 
 	private static final long serialVersionUID = -6638017139073613384L;
 	
-	@Getter
-	@Setter
-	private Class<T> clazz;
 	
-	
-	public NAOTO(Class<T> clazz) {
-		this.setClazz(clazz);
-	}
+	public NAOTO() { super(); }
 
 	
 	public Object get(String fieldName) {
