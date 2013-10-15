@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="NAO.EJB">
+        <wb-resource deploy-path="/" source-path="/ejbModule" tag="defaultRootSource"/>
+        <property name="java-output-path" value="/NAO.EJB/build/classes"/>
+        <property name="ClientProject" value="NAO.EJB.Client"/>
+        <property name="ClientJARURI" value="NAO.EJB.Client.jar"/>
+    </wb-module>
+</project-modules>
