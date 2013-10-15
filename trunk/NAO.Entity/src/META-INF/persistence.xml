@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="NAO.Entity">
+		<jta-data-source>xa/NAO</jta-data-source>
+		<!--<jta-data-source>xa/NAO_HOM</jta-data-source>-->
+		<!--<jta-data-source>xa/NAO_TES</jta-data-source>-->
+		<!--<jta-data-source>xa/NAO_DEV</jta-data-source>-->
+		<properties>
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+			<!--<property name="eclipselink.ddl-generation" value="create-tables" />-->
+			<property name="eclipselink.ddl-generation.output-mode" value="both" />
+			<!--<property name="eclipselink.cache.shared.default" value="false"/>-->
+			<property name="eclipselink.cache.size.default" value="0" />
+			<property name="eclipselink.cache.type.default" value="None" />
+			<property name="eclipselink.query-results-cache" value="false" />
+			<!--<property name="eclipselink.logging.level.sql" value="FINE"/>-->
+			<!--<property name="eclipselink.logging.parameters" value="true"/>-->
+		</properties>
 	</persistence-unit>
 </persistence>
