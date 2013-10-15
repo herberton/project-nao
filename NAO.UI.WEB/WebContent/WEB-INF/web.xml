@@ -2,15 +2,34 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>NAO.UI.WEB</display-name>
   <welcome-file-list>
-    <welcome-file>index.nao</welcome-file>
+    <welcome-file>page/login.xhtml</welcome-file>
   </welcome-file-list>
+  <session-config>
+    <session-timeout>10</session-timeout>
+  </session-config>
+  <error-page>
+    <exception-type>javax.faces.application.ViewExpiredException</exception-type>
+    <location>/page/login.xhtml</location>
+  </error-page>
+  <context-param>
+    <param-name>primefaces.THEME</param-name>
+    <param-value>#{sessionMB.theme}</param-value>
+  </context-param>
+  <filter>
+    <filter-name>PrimeFacesFileUploadFilter</filter-name>
+    <filter-class>org.primefaces.webapp.filter.FileUploadFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>PrimeFacesFileUploadFilter</filter-name>
+    <servlet-name>FacesServlet</servlet-name>
+  </filter-mapping>
   <servlet>
     <servlet-name>FacesServlet</servlet-name>
     <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
-    <load-on-startup>1</load-on-startup>
+    <load-on-startup>2</load-on-startup>
   </servlet>
   <servlet-mapping>
     <servlet-name>FacesServlet</servlet-name>
-    <url-pattern>*.nao</url-pattern>
+    <url-pattern>*.xhtml</url-pattern>
   </servlet-mapping>
 </web-app>
